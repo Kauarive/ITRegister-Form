@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>IT Registration Form</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <!--for form fields-->
+    <form id="register-form" novalidate>
+
+    <!--First Name-->
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" name="firstName" required aria-describedby="first-name-error">
+    <span class="error" id="first-name-error"  role="alert" aria-live="assertive"></span>
+
+    <!-- Last Name -->
+    <label for="last-name" >Last Name:</label>
+    <input type="text" id="last-name" name="lastName" required aria-describedby="last-name-error">
+    <span class="error" id="last-name-error"  role="alert" aria-live="assertive"></span>
+
+    <!--Email-->
+    <label for="email" >Email:</label>
+    <input type="email" id="email" name="email" required aria-describedby="email">
+    <span class="error" id="email-error" role="alert" aria-live="assertive"></span>
+
+    <!-- Programme -->
+     <label for="programme">Programme:</label>
+     <select id="programme" name="programme" required aria-describedby="programme-error">
+        <option value=""> Select Programme </option>
+        <option value="cs">Computer Science</option>
+        <option value="it">Information Technology</option>
+        <option value="se">Software Engineering</option>
+        <option value="is">Marketing</option>
+     </select>
+     <span class="error" id="programme-error" role="alert" aria-live="assertive"></span>
+
+    <!-- Year of study -->
+     <label for="year">Year of Study:</label>
+     <select id="year" name="year" required aria-describedby="year-error">
+       <option value=""> Select Year </option>
+       <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+       <option value="4">4</option>
+     </select>
+     <span class="error" id="year-error" role="alert" aria-live="assertive"></span>
+
+     <!-- Interest -->
+     <fieldset>
+        <legend>Interests:</legend>
+        <label><input type="checkbox" name="interests" value="Web Development" /> Web Development</label>
+        <label><input type="checkbox" name="interests" value="ICG" /> Introduction To Computing</label>
+        <label><input type="checkbox" name="interests" value="PRG" /> Programming</label>
+     <label><input type="checkbox" name="interests" value="BMC" /> Business Management</label>
+     </fieldset>
+     <span class="error" id="interests-error" role="alert"></span>
+    
+     <!-- Photo URL -->
+     <label for="photo">Photo URL</label>
+     <input type="url" id="photo" name="photo" placeholder="https://example.com/photo.jpg" />
+     <span class="error" id="err-photo"></span>
+
+     <button type="submit">Submit Form </button>
+</form>
+
+
+<h2>Profiles</h2>
+<div id="profiles"></div> <!-- cards will go here -->
+
+<h2>Summary Table</h2>
+<table id="summary-table" border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Programme</th>
+      <th>Year</th>
+      <th>Interests</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

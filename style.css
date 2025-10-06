@@ -1,0 +1,194 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #333;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Form Styles */
+form {
+  max-width: 500px;
+  background: #fff;
+  padding: 20px;
+  margin: 0 auto 30px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form h2 {
+  margin-bottom: 15px;
+  color: inherit;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 2px;
+  display: block;
+}
+
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: #2d2e2d;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+button:hover {
+  background: #222522;
+  transform: translateY(-2px); /* subtle lift */
+}
+
+/*  Profiles Section (Cards)  */
+#profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+  position: relative;
+  transition: background 0.3s, color 0.3s;
+}
+
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profile-card h3 {
+  margin-bottom: 5px;
+}
+
+.remove-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.remove-btn:hover {
+  background: darkred;
+}
+
+/* Summary Table  */
+#summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#summary-table th,
+#summary-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+#summary-table th {
+  background: #222522;
+  color: white;
+}
+
+#summary-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+#summary-table .remove-btn {
+  background: crimson;
+  font-size: 13px;
+  padding: 5px 8px;
+}
+
+/* Responsive Design */
+/* For laptops (max-width 1200px) */
+@media (max-width: 1200px) {
+  form {
+    max-width: 80%;
+  }
+
+  #profiles {
+    gap: 10px;
+  }
+
+  .profile-card {
+    width: 200px;
+  }
+}
+
+/* For tablets & phones (max-width 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .profile-card {
+    width: 100%;
+  }
+
+  #summary-table th, 
+  #summary-table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
